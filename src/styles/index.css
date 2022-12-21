@@ -5,12 +5,22 @@
 :root {
   --darkPurple: #2a1067;
   --background-color: #0f1923;
+  --glacierWhite: #f4f4f8;
+  --glacierBlue: #f2f6fc;
+  --white: #f8fcff;
 }
 
 * {
-  background-color: var(--darkPurple);
-  color: white;
+  background-color: var(--glacierWhite);
   box-sizing: border-box;
+}
+
+.bayangan{
+  box-shadow: 25px 20px; 
+}
+
+.bayangan_field{
+  box-shadow: 4px 3px; 
 }
 
 // button
