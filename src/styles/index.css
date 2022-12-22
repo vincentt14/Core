@@ -23,7 +23,7 @@
 } */
 
 .bayangan {
-  box-shadow: 25px 20px #030723;
+  box-shadow: 10px 8px #030723;
 }
 
 .bayangan_field {
@@ -32,4 +32,16 @@
 
 button:hover {
   box-shadow: 4px 3px #030723;
+}
+
+@media (min-width: 768px) {
+  .bayangan {
+    box-shadow: 17px 15px #030723;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bayangan {
+    box-shadow: 25px 20px #030723;
+  }
 }
