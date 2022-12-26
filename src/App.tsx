@@ -1,13 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
+import Navigation from "./components/Navigation";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 
 const App = () => {
   return (
-    <div>
+    <>
+      <header>
+        <Navigation />
+      </header>
       <main>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
@@ -16,7 +20,7 @@ const App = () => {
         </Routes>
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
