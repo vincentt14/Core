@@ -6,17 +6,17 @@ const Navigation = () => {
   const refBut = useRef<HTMLButtonElement>(null);
   const refHead = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    window.onscroll = function () {
-      const fixedNav: number | undefined = refHead.current?.offsetTop;
+  // useEffect(() => {
+  //   window.onscroll = function () {
+  //     const fixedNav: number | undefined = refHead.current?.offsetTop;
 
-      if (window.pageYOffset > fixedNav != undefined) {
-        refHead.current?.classList.add("navbar-fixed");
-      } else {
-        refHead.current?.classList.remove("navbar-fixed");
-      }
-    };
-  }, []);
+  //     if (window.pageYOffset > fixedNav != undefined) {
+  //       refHead.current?.classList.add("navbar-fixed");
+  //     } else {
+  //       refHead.current?.classList.remove("navbar-fixed");
+  //     }
+  //   };
+  // }, []);
 
   const toggleClicked = () => {
     setToggle(!toggle);
