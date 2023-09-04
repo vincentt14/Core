@@ -37,15 +37,15 @@ const Footer = () => {
       logo: <BiLogoReact className="text-white w-8 h-8" />,
     },
     {
-      name: "React.js",
+      name: "TypeScript",
       logo: <BiLogoTypescript className="text-white w-8 h-8" />,
     },
     {
-      name: "React.js",
+      name: "Redux",
       logo: <BiLogoRedux className="text-white w-8 h-8" />,
     },
     {
-      name: "React.js",
+      name: "Tailwind",
       logo: <BiLogoTailwindCss className="text-white w-8 h-8" />,
     },
   ];
@@ -115,7 +115,7 @@ const Footer = () => {
               <h3 className="mb-5 mt-4 text-xl font-semibold text-white">About Me</h3>
               {reach.map((item) => (
                 <li key={item.href}>
-                  <Link to={item.href} className="mb-2 inline-block text-base text-primary hover:text-white">
+                  <Link to={item.href} target="blank" className="mb-2 inline-block text-base text-primary hover:text-white">
                     {item.label}
                   </Link>
                 </li>

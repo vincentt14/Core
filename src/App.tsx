@@ -8,7 +8,7 @@ import DashboardPage from "./pages/DashboardPage";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const [authenticated, setAuthenticated] = useState(true);
+  const [authenticated, setAuthenticated] = useState(false);
 
   if (!authenticated) {
     return (
@@ -21,6 +21,7 @@ const App = () => {
             <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </main>
+        <Footer />
       </>
     );
   }
