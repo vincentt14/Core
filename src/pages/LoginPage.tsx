@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaUserAstronaut } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+
+import CustomButton from "../components/CustomButton";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -9,9 +10,10 @@ const LoginPage = () => {
 
   return (
     <div className="md:grid grid-cols-2">
-      <div className="bg-tertiary">dsadsad</div>
+      <div className="bg-tertiary hidden md:block">dsadsad</div>
       <div className="p-14 lg:p-20 flex flex-col">
-        <h1 className="font-bold text-5xl mb-7">Login</h1>
+        <h1 className="font-bold text-5xl mb-5">Login</h1>
+        <hr className="w-20 p-1 bg-secondary border border-borderColor rounded-sm" />
         <form>
           <div className="my-5">
             <div className="flex items-center justify-start gap-6">
@@ -31,13 +33,10 @@ const LoginPage = () => {
             </div>
           </div>
 
+          <p className="text-primary">Don't have account yet? Click Register First</p>
           <div className="grid grid-cols-2 gap-3">
-            <button type="submit" className="my-4 py-3 px-6 rounded-md font-semibold border bg-white hover:bg-[#ededed]">
-              <span className="text-secondary lg:w-3/4">Login</span>
-            </button>
-            <button type="submit" className="my-4 py-3 px-6 rounded-md font-semibold border bg-tertiary border-borderColor hover:border-primary">
-              <Link to="/register" className="text-white lg:w-3/4">Register</Link>
-            </button>
+            <CustomButton btnType="submit" containerStyle="bg-white hover:bg-[#ededed]" title="Login" textStyle="text-secondary" />
+            <CustomButton btnType="button" containerStyle="bg-tertiary border-borderColor hover:border-primary" title="Register" textStyle="text-white" to="/register" />
           </div>
         </form>
       </div>
