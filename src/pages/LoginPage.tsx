@@ -2,19 +2,27 @@ import React, { useState } from "react";
 import { FaUserAstronaut } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 
+import Welcome from "../components/Welcome";
 import CustomButton from "../components/CustomButton";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const submithandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(email, password);
+  };
+
   return (
     <div className="md:grid grid-cols-2">
-      <div className="bg-tertiary hidden md:block">dsadsad</div>
-      <div className="p-14 lg:p-20 flex flex-col">
+      <div className="hidden md:block">
+        <Welcome />
+      </div>
+      <div className="p-14 lg:p-20 flex flex-col self-center">
         <h1 className="font-bold text-5xl mb-5">Login</h1>
         <hr className="w-20 p-1 bg-secondary border border-borderColor rounded-sm" />
-        <form>
+        <form onSubmit={submithandler}>
           <div className="my-5">
             <div className="flex items-center justify-start gap-6">
               <FaUserAstronaut className="text-5xl text-primary hidden lg:block" />

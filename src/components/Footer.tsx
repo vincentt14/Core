@@ -1,4 +1,3 @@
-import React from "react";
 import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { BiLogoTypescript, BiLogoTailwindCss, BiLogoReact, BiLogoRedux } from "react-icons/bi";
@@ -87,7 +86,7 @@ const Footer = () => {
                 <h2 className="py-1 text-4xl font-bold text-white">CORE.</h2>
               </div>
               <hr className="w-32 my-3 p-1 bg-black border border-borderColor rounded-sm" />
-              <h3 className="mb-4 mt-5 text-2xl font-bold text-white">Contact Me</h3>
+              <h3 className="mb-4 mt-5 text-2xl font-bold text-white">Contact Founder</h3>
               {contacts.map((contact) => (
                 <div key={contact.target} className="flex gap-2 my-2">
                   <p className="py-2 text-primary">{contact.label}:</p>
@@ -112,7 +111,7 @@ const Footer = () => {
           </div>
           <div className="mb-5 w-full flex-col place-items-center md:flex md:w-1/3">
             <ul className="text-slate-400">
-              <h3 className="mb-5 mt-4 text-xl font-semibold text-white">About Me</h3>
+              <h3 className="mb-5 mt-4 text-xl font-semibold text-white">About Founder</h3>
               {reach.map((item) => (
                 <li key={item.href}>
                   <Link to={item.href} target="blank" className="mb-2 inline-block text-base text-primary hover:text-white">

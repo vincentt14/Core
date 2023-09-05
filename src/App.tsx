@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router";
 import { Toaster } from "react-hot-toast";
 
@@ -9,6 +9,10 @@ import Footer from "./components/Footer";
 
 const App = () => {
   const [authenticated, setAuthenticated] = useState(false);
+
+  useEffect(() => {
+    setAuthenticated(true);
+  }, []);
 
   if (!authenticated) {
     return (
