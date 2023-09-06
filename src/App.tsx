@@ -8,7 +8,7 @@ import DashboardPage from "./pages/DashboardPage";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const [authenticated, setAuthenticated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(true);
 
   useEffect(() => {
     setAuthenticated(true);
