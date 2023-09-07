@@ -4,7 +4,7 @@ import { BsRocketFill } from "react-icons/bs";
 import { MdEdit } from "react-icons/md";
 
 import Lottie from "lottie-react";
-import batman from "../../public/lottie/batman.json";
+import batman from "../lottie/batman.json";
 import CustomButton from "./CustomButton";
 
 const DashboardContent = () => {
@@ -12,7 +12,7 @@ const DashboardContent = () => {
   const [favCategory, setFavCategory] = useState("");
 
   useEffect(() => {
-    setCategoryNum(7);
+    setCategoryNum(6);
     setFavCategory("Computer Logins");
   }, []);
 
@@ -32,7 +32,7 @@ const DashboardContent = () => {
             <h3 className="text-2xl font-bold">Your Category Count</h3>
             <p className="text-6xl font-bold text-primary">{categoryNum}</p>
           </div>
-          <CustomButton btnType="button" title="Manage Categories" textStyle="text-white" containerStyle="!mb-0 border-borderColor hover:border-primary" to="/manageCategories" />
+          <CustomButton btnType="button" title="Manage Categories" textStyle="text-white" containerStyle="!mb-0 border-borderColor hover:border-primary" to="/categoryEditor" />
         </div>
         <div className="border p-5 border-borderColor rounded-md bg-tertiary">
           <div className="grid lg:grid-cols-3">

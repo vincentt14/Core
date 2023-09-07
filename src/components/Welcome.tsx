@@ -1,6 +1,6 @@
 import { Typewriter } from "react-simple-typewriter";
 import Lottie from "lottie-react";
-import security from "../../public/lottie/security.json";
+import security from "../lottie/security.json";
 
 const Welcome = () => {
   return (
