@@ -4,45 +4,38 @@ import CustomButton from "./CustomButton";
 interface IDummy {
   id: number;
   title: string;
-  url: string;
   count: number;
 }
 
 const dummy = [
   {
-    id: 1,
+    id: 6,
     title: "Computer Logins", //unique
-    url: "/computerlogins", //autogenerate from title lowercase + regex
     count: 2,
   },
   {
-    id: 2,
+    id: 5,
     title: "Credit Cards", //unique
-    url: "/creditcards", //autogenerate from title lowercase + regex
     count: 0,
-  },
-  {
-    id: 3,
-    title: "e-Banking", //unique
-    url: "/ebanking", //autogenerate from title lowercase + regex
-    count: 1,
   },
   {
     id: 4,
+    title: "e-Banking", //unique
+    count: 1,
+  },
+  {
+    id: 3,
     title: "e-Shops", //unique
-    url: "/eshops", //autogenerate from title lowercase + regex
     count: 0,
   },
   {
-    id: 5,
+    id: 2,
     title: "Email Accounts", //unique
-    url: "/emailaccounts", //autogenerate from title lowercase + regex
     count: 4,
   },
   {
-    id: 6,
+    id: 1,
     title: "Web Accounts", //unique
-    url: "/webaccounts", //autogenerate from title lowercase + regex
     count: 12,
   },
 ];
@@ -57,7 +50,7 @@ const CategoryEdit = () => {
   return (
     <div className="grid md:grid-cols-3 gap-4">
       <div className="border p-5 border-blue-400 rounded-md bg-secondary flex items-center justify-center">
-        <CustomButton btnType="button" title="Add New Category" textStyle="text-white font-mono" containerStyle="!my-0 border-borderColor hover:border-primary" to="/add" />
+        <CustomButton btnType="button" title="Add New Category" textStyle="text-white font-mono" containerStyle="!my-0 border-borderColor hover:border-primary" to="/addCategory" />
       </div>
       {data.map((dum) => (
         <div key={dum.id} className="border p-5 border-borderColor rounded-md bg-tertiary">

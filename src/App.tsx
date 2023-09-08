@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import DashboardContent from "./components/DashboardContent";
 import Categories from "./components/Categories";
 import CategoryEdit from "./components/CategoryEdit";
+import AddCategory from "./components/AddCategory";
+import ProfileSettings from "./components/ProfileSettings";
 
 const App = () => {
   const [authenticated, setAuthenticated] = useState(true);
@@ -42,6 +44,8 @@ const App = () => {
             <Route path="/" element={<DashboardContent />} />
             <Route path="categories" element={<Categories />} />
             <Route path="categoryEditor" element={<CategoryEdit />} />
+            <Route path="addCategory" element={<AddCategory />} />
+            <Route path="settings" element={<ProfileSettings />} />
           </Route>
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />} />

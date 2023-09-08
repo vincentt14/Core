@@ -10,11 +10,16 @@ import CustomButton from "./CustomButton";
 const DashboardContent = () => {
   const [categoryNum, setCategoryNum] = useState(0);
   const [favCategory, setFavCategory] = useState("");
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     setCategoryNum(6);
     setFavCategory("Computer Logins");
   }, []);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
 
   const favCatClicked = () => {
     alert(favCategory);
@@ -26,6 +31,16 @@ const DashboardContent = () => {
 
   return (
     <div className="grid md:grid-cols-3 gap-4">
+      {modal && (
+        <div className="modal">
+          <div onClick={toggleModal} className="overlay"></div>
+          <div className="modal-content">
+            <h2 className="text-xl font-semibold">
+              dsadsa
+            </h2>
+          </div>
+        </div>
+      )}
       <div className="md:col-span-2 grid lg:grid-cols-2 gap-4">
         <div className="border p-5 border-borderColor rounded-md bg-tertiary">
           <div className="flex gap-4 items-center justify-between">
@@ -51,8 +66,8 @@ const DashboardContent = () => {
         <div className="border p-5 border-borderColor rounded-md bg-tertiary">
           <h3 className="text-4xl text-center font-bold text-blue-500">CORE</h3>
           <div className="grid lg:grid-cols-2 lg:gap-2">
-            <CustomButton btnType="button" title="About" textStyle="text-white" containerStyle="!mb-0 border-borderColor hover:border-primary" />
-            <CustomButton btnType="button" title="Algorithm" textStyle="text-white" containerStyle="!mb-0 border-borderColor hover:border-primary" />
+            <CustomButton btnType="submit" title="About" textStyle="text-white" containerStyle="!mb-0 border-borderColor hover:border-primary" onClick={toggleModal} />
+            <CustomButton btnType="submit" title="Algorithm" textStyle="text-white" containerStyle="!mb-0 border-borderColor hover:border-primary" onClick={toggleModal} />
           </div>
         </div>
       </div>

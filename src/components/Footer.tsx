@@ -10,12 +10,12 @@ interface IContact {
 const Footer = () => {
   const shortcuts = [
     {
-      href: "/categoryEditor",
-      label: "Category Editor",
-    },
-    {
       href: "/categories",
       label: "Categories",
+    },
+    {
+      href: "/categoryEditor",
+      label: "Category Editor",
     },
   ];
 
@@ -102,7 +102,7 @@ const Footer = () => {
               <h3 className="mb-5 mt-4 text-xl font-semibold text-white">Shortcuts</h3>
               {shortcuts.map((shortcut) => (
                 <li key={shortcut.href}>
-                  <Link to={shortcut.href} target="blank" className="mb-2 inline-block text-base text-primary hover:text-white">
+                  <Link to={shortcut.href} className="mb-2 inline-block text-base text-primary hover:text-white">
                     {shortcut.label}
                   </Link>
                 </li>
